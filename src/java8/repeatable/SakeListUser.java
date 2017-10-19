@@ -13,10 +13,20 @@ import java.lang.annotation.Annotation;
 public class SakeListUser {
 
 	public static void main(String[] args) {
+		/* 最初に試したやり方 */
 		Annotation[] anoList = SakeListUser.class.getAnnotationsByType(Sake.class);
 		for (int i = 0; i < anoList.length; i++) {
 			System.out.println(anoList[i]);
 		}
+
+		/* 教えていただいたやり方 */
+		// Annotation[] ではなく Sake[] で取れる
+		Sake[] Sakes = SakeListUser.class.getAnnotationsByType(Sake.class);
+		for (int i = 0; i < Sakes.length; i++) {
+		    // Sake#name() はメソッドとして呼べる
+		    System.out.println(Sakes[i].name());
+		}
+
 	}
 
 }
