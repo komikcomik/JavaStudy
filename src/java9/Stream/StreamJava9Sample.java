@@ -12,7 +12,6 @@ import java.util.stream.Stream;
 public class StreamJava9Sample {
 
 	public static void main(String[] args) {
-
 		List<String> list = Arrays.asList("AA", "BB", "C", "DD", "E", "FGH");
 		List<String> list2 = Arrays.asList("A", "B", "C", "DD", "E", "FGH");
 
